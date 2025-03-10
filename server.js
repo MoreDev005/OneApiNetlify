@@ -6,5 +6,5 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   res.send('P bang')
 });
-app.use("/api/", router);
+app.use("/", router);
 module.exports = app; // Ekspor aplikasi Express
