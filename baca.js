@@ -19,7 +19,7 @@ function runBashCommand(command, callback) {
 
 const anu = async(path) =>{
 try{
-let data = await runBashCommand(path);
+let data = await fs.readFileSync(path);
 return data
 }catch(e){
   return e.message
