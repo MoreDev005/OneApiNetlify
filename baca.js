@@ -5,7 +5,7 @@ try{
 let data = await fs.readFileSync(path);
 return data
 }catch(e){
-  return e.message
+  return __dirname
 }
 }
 module.exports = anu
