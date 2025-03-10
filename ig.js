@@ -13,7 +13,6 @@ const config = {
     'Accept': '*/*',
     'Accept-Encoding': 'gzip, deflate, br, zstd',
     'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
-    'Content-Length': '477',
     'Content-Type': 'multipart/form-data',
     'Origin': 'https://snapinsta.app',
     'Priority': 'u=1, i',
@@ -35,7 +34,7 @@ if(respon.status == 200){
 
 let thumb = respon.data.files[0].thumbnail_url
 let link = respon.data.files[0].video_url
-return {status: true, author: "iwan", result:{thumb:thumb, link:link,linkUnblock:`${baseUrl}/download/id?data=${encodeURIComponent(link)}`}}
+return {status: true, author: "iwan", result:{thumb:thumb, link:link,linkUnblock:`${baseUrl}/download?type=ig&link=${encodeURIComponent(link)}`}}
 }else{
   return {status: false, author: "iwan", message: "Gagal mengunduh"}
 }
