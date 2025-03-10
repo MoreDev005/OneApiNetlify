@@ -34,7 +34,7 @@ if(respon.status == 200){
 
 let thumb = respon.data.files[0].thumbnail_url
 let link = respon.data.files[0].video_url
-return {status: true, author: "iwan", result:{thumb:thumb, link:link,linkUnblock:`${baseUrl}/download?type=ig&link=${encodeURIComponent(link)}`}}
+return {status: true, author: "iwan", result:{thumb:thumb, link:link,linkUnblock:`${baseUrl}/download/id?data=ig${encodeURIComponent(link)}`}}
 }else{
   return {status: false, author: "iwan", message: "Gagal mengunduh"}
 }
