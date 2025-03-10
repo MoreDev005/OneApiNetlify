@@ -22,8 +22,8 @@ let $ = cheerio.load(respon.data.template)
    arrlink.push(link)
  })
  let  thumb = $('.img_thumb > img').attr('src');
- let hd = `${baseUrl}/download/id?data=${encodeURIComponent(arrlink[0])}`
- let sd = `${baseUrl}/download/id?data=${encodeURIComponent(arrlink[1])}`
+ let hd = `${baseUrl}/download?type=fb&link=${encodeURIComponent(arrlink[0])}`
+ let sd = `${baseUrl}/download?type=fb&link=${encodeURIComponent(arrlink[1])}`
  return {
  status:true,
  author:"iwan",
