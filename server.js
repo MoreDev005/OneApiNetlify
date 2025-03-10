@@ -6,5 +6,5 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   res.send('P bang')
 });
-app.use("/.netlify/functions/express", router);
+app.use("/.netlify/functions", router);
 module.exports = app; // Ekspor aplikasi Express
