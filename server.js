@@ -9,7 +9,6 @@ const ig = require('./ig.js');
 const yta = require('./yta.js');
 const ytv = require('./ytv.js');
 const fb = require('./fb.js');
-const {getBuffer} = require('./myfunc.js');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -114,7 +113,7 @@ let html = `<!DOCTYPE html>
 
     <section class="api-endpoint">
         <h2>GET AI</h2>
-        <p><strong>URL:</strong> <a href="https://oneapiserver.vercel.app/ai/id?data=apa+itu+klorofil" target="_blank">https://oneapiserver.vercel.app/ai/id?data=apa+itu+klorofil</a></p>
+        <p><strong>URL:</strong> <a href="https://oneapinetlify.netlify.app//ai/id?data=apa+itu+klorofil" target="_blank">https://oneapinetlify.netlify.app//ai/id?data=apa+itu+klorofil</a></p>
         <h3>Response</h3>
         <pre>
 {
@@ -129,7 +128,7 @@ let html = `<!DOCTYPE html>
 
     <section class="api-endpoint">
         <h2>GET YOUTUBE MP3</h2>
-        <p><strong>URL:</strong> <a href="https://oneapiserver.vercel.app/yta/id?data=https://www.youtube.com/watch?v=0AJ1hOIyG4k" target="_blank">https://oneapiserver.vercel.app/yta/id?data=https://www.youtube.com/watch?v=0AJ1hOIyG4k</a></p>
+        <p><strong>URL:</strong> <a href="https://oneapinetlify.netlify.app//yta/id?data=https://www.youtube.com/watch?v=0AJ1hOIyG4k" target="_blank">https://oneapinetlify.netlify.app//yta/id?data=https://www.youtube.com/watch?v=0AJ1hOIyG4k</a></p>
         <h3>Response</h3>
         <pre>
 {
@@ -145,7 +144,7 @@ let html = `<!DOCTYPE html>
 
     <section class="api-endpoint">
         <h2>GET YOUTUBE MP4</h2>
-        <p><strong>URL:</strong> <a href="https://oneapiserver.vercel.app/ytv/id?data=https://www.youtube.com/watch?v=cRKYbhZXoUI" target="_blank">https://oneapiserver.vercel.app/ytv/id?data=https://www.youtube.com/watch?v=cRKYbhZXoUI</a></p>
+        <p><strong>URL:</strong> <a href="https://oneapinetlify.netlify.app//ytv/id?data=https://www.youtube.com/watch?v=cRKYbhZXoUI" target="_blank">https://oneapinetlify.netlify.app//ytv/id?data=https://www.youtube.com/watch?v=cRKYbhZXoUI</a></p>
         <h3>Response</h3>
         <pre>
 {
@@ -161,7 +160,7 @@ let html = `<!DOCTYPE html>
 
     <section class="api-endpoint">
         <h2>GET TIKTOK</h2>
-        <p><strong>URL:</strong> <a href="https://oneapiserver.vercel.app/tiktok/id?data=https://vt.tiktok.com/ZSMCtdvKm" target="_blank">https://oneapiserver.vercel.app/tiktok/id?data=https://vt.tiktok.com/ZSMCtdvKm</a></p>
+        <p><strong>URL:</strong> <a href="https://oneapinetlify.netlify.app//tiktok/id?data=https://vt.tiktok.com/ZSMCtdvKm" target="_blank">https://oneapinetlify.netlify.app//tiktok/id?data=https://vt.tiktok.com/ZSMCtdvKm</a></p>
         <h3>Response</h3>
         <pre>
 {
@@ -179,7 +178,7 @@ let html = `<!DOCTYPE html>
 
     <section class="api-endpoint">
         <h2>GET INSTAGRAM</h2>
-        <p><strong>URL:</strong> <a href="https://oneapiserver.vercel.app/ig/id?data=https://www.instagram.com/reel/DDd7QqeRyWX/?igsh=MWdpbWl5djhxMTFkMg==" target="_blank">https://oneapiserver.vercel.app/ig/id?data=https://www.instagram.com/reel/DDd7QqeRyWX/?igsh=MWdpbWl5djhxMTFkMg==</a></p>
+        <p><strong>URL:</strong> <a href="https://oneapinetlify.netlify.app//ig/id?data=https://www.instagram.com/reel/DDd7QqeRyWX/?igsh=MWdpbWl5djhxMTFkMg==" target="_blank">https://oneapinetlify.netlify.app//ig/id?data=https://www.instagram.com/reel/DDd7QqeRyWX/?igsh=MWdpbWl5djhxMTFkMg==</a></p>
         <h3>Response</h3>
         <pre>
 {
@@ -195,7 +194,7 @@ let html = `<!DOCTYPE html>
 
     <section class="api-endpoint">
         <h2>GET FACEBOOK</h2>
-        <p><strong>URL:</strong> <a href="https://oneapiserver.vercel.app/fb/id?data=https://fb.watch/yasCLNd0ai" target="_blank">https://oneapiserver.vercel.app/fb/id?data=https://fb.watch/yasCLNd0ai</a></p>
+        <p><strong>URL:</strong> <a href="https://oneapinetlify.netlify.app//fb/id?data=https://fb.watch/yasCLNd0ai" target="_blank">https://oneapinetlify.netlify.app//fb/id?data=https://fb.watch/yasCLNd0ai</a></p>
         <h3>Response</h3>
         <pre>
 {
@@ -206,10 +205,6 @@ let html = `<!DOCTYPE html>
     "link": {
       "hd": "https://ssscdn.io/getmyfb/aHR0cHM6Ly92aWRlby1taWEzLTIueHguZmJjZG4ubmV0L28xL3YvdDIvZjIvbTY5L0FRTUZBLVY4ZzV4N1Q0N1F1QXE1SDE2NTVMaDNlNEdJMHhlR2tCbnZiQkI1TW1PS0NRVVlaYmpURHFkWHNfRjIyVjJKbHN6QTlPLUN4X3dfNkZTWk5YancubXA0P2VmZz1leUprZFhKaGRHbHZibDl6SWpveU1UTXNJblpwWDNWelpXTmhjMlZmYVdRaU9qRXdNVEl5TENKNGNIWmZZWE56WlhSZmFXUWlPakV4TlRVNE9UZzVNekk0TlRJME9Ua3NJblpsYm1OdlpHVmZkR0ZuSWpvaWVIQjJYM0J5YjJkeVpYTnphWFpsTGtaQlEwVkNUMDlMTGk1RE15NDNNakF1WkdGemFGOW9NalkwTFdKaGMybGpMV2RsYmpKZk56SXdjQ0o5Jl9uY19odD12aWRlby1taWEzLTIueHguZmJjZG4ubmV0Jl9uY19jYXQ9MTExJl9uY19vYz1BZGlFeEQ5aThXLWJpNzhhQXktalF0cUFmTnBoSjZJaFYwbDI0MjhoTnZDR3V0REVDd256eTFmQThnR0FZM2JWWnFZJnN0cmV4dD0xJnZzPTU4ZjgzNDljOTk2Y2EzNTgmX25jX3ZzPUhCa3NGUUlZT25CaGMzTjBhSEp2ZFdkb1gyVjJaWEp6ZEc5eVpTOUhTamwxY1VKNVJsSk9hekZVVkdOSlFVUkNka3M0VTFGaWVXc3RZbTFrYWtGQlFVWVZBQUxJQVFBVkFoZzZjR0Z6YzNSb2NtOTFaMmhmWlhabGNuTjBiM0psTDBkR1ZHZDBVbnBYY1ZSZlZHWkVjMFZCU2pNdFoyWXlTalZSZUhWaWNrWnhRVUZCUmhVQ0FzZ0JBQ2dBR0FBYkFvZ0hkWE5sWDI5cGJBRXhFbkJ5YjJkeVpYTnphWFpsWDNKbFkybHdaUUV4RlFBQUpxYmN6NVNXMG8wRUZRSW9Ba016TEJkQWFxdTJSYUhLd1JnWlpHRnphRjlvTWpZMExXSmhjMmxqTFdkbGJqSmZOekl3Y0JFQWRRSUEmY2NiPTktNCZvaD0wMF9BWUgwTWtZVnVHUHB2VGRKTjFYWDFPdDZGcnZSZUlrOWN6ajQxc2Z0bGtpNHp3Jm9lPTY3Q0NCMkZCJl9uY19zaWQ9MWQ1NzZk",
       "sd": "https://ssscdn.io/getmyfb/aHR0cHM6Ly92aWRlby1taWEzLTMueHguZmJjZG4ubmV0L28xL3YvdDIvZjIvbTY5L0FRUEF2MGFrdmU1OV9mUTJRVk5mWnBTZXNPYnVuY3hJVVFXbHg1WktNMHNELUptelZvZ1ZqWnRUUFJRYjZRalNNbXBfdmJmSWttUEJOM2RodjhfVFowUXcubXA0P3N0cmV4dD0xJl9uY19jYXQ9MTA4Jl9uY19zaWQ9OGJmOGZlJl9uY19odD12aWRlby1taWEzLTMueHguZmJjZG4ubmV0Jl9uY19vaGM9SVZCbHJMVjBGMDBRN2tOdmdFcG8zSWMmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW5od2RsOXdjbTluY21WemMybDJaUzVHUVVORlFrOVBTeTR1UXpNdU16WXdMbk4yWlY5elpDSXNJbmh3ZGw5aGMzTmxkRjlwWkNJNk1URTFOVGc1T0Rrek1qZzFNalE1T1N3aWRtbGZkWE5sWTJGelpWOXBaQ0k2TVRBeE1qSXNJbVIxY21GMGFXOXVYM01pT2pJeE15d2lkWEpzWjJWdVgzTnZkWEpqWlNJNkluZDNkeUo5JmNjYj0xNy0xJl9uY196dD0yOCZvaD0wMF9BWUdMcjB0QUl2NlFlb2IxUm5RVlY3Z0c0TWlUd3A4VkVSVG5wWDNnRjg1RTVnJm9lPTY3RDA5NjE2"
-    },
-    "linkUnblock": {
-      "hd": "http://oneapiserver.vercel.app/download/id?data=https%3A%2F%2Fssscdn.io%2Fgetmyfb%2FaHR0cHM6Ly92aWRlby1taWEzLTIueHguZmJjZG4ubmV0L28xL3YvdDIvZjIvbTY5L0FRTUZBLVY4ZzV4N1Q0N1F1QXE1SDE2NTVMaDNlNEdJMHhlR2tCbnZiQkI1TW1PS0NRVVlaYmpURHFkWHNfRjIyVjJKbHN6QTlPLUN4X3dfNkZTWk5YancubXA0P2VmZz1leUprZFhKaGRHbHZibDl6SWpveU1UTXNJblpwWDNWelpXTmhjMlZmYVdRaU9qRXdNVEl5TENKNGNIWmZZWE56WlhSZmFXUWlPakV4TlRVNE9UZzVNekk0TlRJME9Ua3NJblpsYm1OdlpHVmZkR0ZuSWpvaWVIQjJYM0J5YjJkeVpYTnphWFpsTGtaQlEwVkNUMDlMTGk1RE15NDNNakF1WkdGemFGOW9NalkwTFdKaGMybGpMV2RsYmpKZk56SXdjQ0o5Jl9uY19odD12aWRlby1taWEzLTIueHguZmJjZG4ubmV0Jl9uY19jYXQ9MTExJl9uY19vYz1BZGlFeEQ5aThXLWJpNzhhQXktalF0cUFmTnBoSjZJaFYwbDI0MjhoTnZDR3V0REVDd256eTFmQThnR0FZM2JWWnFZJnN0cmV4dD0xJnZzPTU4ZjgzNDljOTk2Y2EzNTgmX25jX3ZzPUhCa3NGUUlZT25CaGMzTjBhSEp2ZFdkb1gyVjJaWEp6ZEc5eVpTOUhTamwxY1VKNVJsSk9hekZVVkdOSlFVUkNka3M0VTFGaWVXc3RZbTFrYWtGQlFVWVZBQUxJQVFBVkFoZzZjR0Z6YzNSb2NtOTFaMmhmWlhabGNuTjBiM0psTDBkR1ZHZDBVbnBYY1ZSZlZHWkVjMFZCU2pNdFoyWXlTalZSZUhWaWNrWnhRVUZCUmhVQ0FzZ0JBQ2dBR0FBYkFvZ0hkWE5sWDI5cGJBRXhFbkJ5YjJkeVpYTnphWFpsWDNKbFkybHdaUUV4RlFBQUpxYmN6NVNXMG8wRUZRSW9Ba016TEJkQWFxdTJSYUhLd1JnWlpHRnphRjlvTWpZMExXSmhjMmxqTFdkbGJqSmZOekl3Y0JFQWRRSUEmY2NiPTktNCZvaD0wMF9BWUgwTWtZVnVHUHB2VGRKTjFYWDFPdDZGcnZSZUlrOWN6ajQxc2Z0bGtpNHp3Jm9lPTY3Q0NCMkZCJl9uY19zaWQ9MWQ1NzZk",
-      "sd": "http://oneapiserver.vercel.app/download/id?data=https%3A%2F%2Fssscdn.io%2Fgetmyfb%2FaHR0cHM6Ly92aWRlby1taWEzLTMueHguZmJjZG4ubmV0L28xL3YvdDIvZjIvbTY5L0FRUEF2MGFrdmU1OV9mUTJRVk5mWnBTZXNPYnVuY3hJVVFXbHg1WktNMHNELUptelZvZ1ZqWnRUUFJRYjZRalNNbXBfdmJmSWttUEJOM2RodjhfVFowUXcubXA0P3N0cmV4dD0xJl9uY19jYXQ9MTA4Jl9uY19zaWQ9OGJmOGZlJl9uY19odD12aWRlby1taWEzLTMueHguZmJjZG4ubmV0Jl9uY19vaGM9SVZCbHJMVjBGMDBRN2tOdmdFcG8zSWMmZWZnPWV5SjJaVzVqYjJSbFgzUmhaeUk2SW5od2RsOXdjbTluY21WemMybDJaUzVHUVVORlFrOVBTeTR1UXpNdU16WXdMbk4yWlY5elpDSXNJbmh3ZGw5aGMzTmxkRjlwWkNJNk1URTFOVGc1T0Rrek1qZzFNalE1T1N3aWRtbGZkWE5sWTJGelpWOXBaQ0k2TVRBeE1qSXNJbVIxY21GMGFXOXVYM01pT2pJeE15d2lkWEpzWjJWdVgzTnZkWEpqWlNJNkluZDNkeUo5JmNjYj0xNy0xJl9uY196dD0yOCZvaD0wMF9BWUdMcjB0QUl2NlFlb2IxUm5RVlY3Z0c0TWlUd3A4VkVSVG5wWDNnRjg1RTVnJm9lPTY3RDA5NjE2"
     }
   }
 }
