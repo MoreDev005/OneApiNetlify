@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const read = require('./baca.js')
 const router = express.Router();
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   let baca = await read('./home.html');
   res.send(baca)
 });
