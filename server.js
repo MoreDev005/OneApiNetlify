@@ -225,9 +225,6 @@ let html = `<!DOCTYPE html>
 res.send(html)
 });
 
-});
-
-
 router.get('/getbuffer/:id', async (req,res) => {
 const q = req.query.data
 const emulate = () =>{
