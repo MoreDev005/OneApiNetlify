@@ -3,7 +3,6 @@ const express = require("express");
 const serverless = require("serverless-http");
 const fs = require('fs');
 const path = require('path');
-const ytmp3 = require("./savetube.js");
 const aichat = require('./aitoxic.js');
 const tikwm = require('./tikwm.js');
 const ig = require('./ig.js');
@@ -223,22 +222,6 @@ let html = `<!DOCTYPE html>
 </body>
 </html>`
 res.send(html)
-});
-
-router.get('/getbuffer/:id', async (req,res) => {
-const q = req.query.data
-const emulate = () =>{
-async function start() {
-try{
-const respon = await getBuffer(q)
-  res.send(respon)
-}catch(e){
-    res.end()
-}
-}
-start()
-}
-emulate()
 });
 
 router.get('/ai/:id', async (req,res) => {
